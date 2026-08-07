@@ -3,7 +3,7 @@ import SearchData
 import SearchDomain
 import SearchUI
 import AnalyticsAPI
-import Networking
+import NetworkingInterface
 import ListingKit
 
 /// Наружу торчит только это. SearchUI, SearchData и SearchDomain
@@ -11,7 +11,7 @@ import ListingKit
 /// ни одной чужой команде.
 public enum SearchAssembly {
 
-    public static func makeRepository(client: APIClient) -> any SearchRepository {
+    public static func makeRepository(client: any HTTPPerforming) -> any SearchRepository {
         RemoteSearchRepository(client: client)
     }
 

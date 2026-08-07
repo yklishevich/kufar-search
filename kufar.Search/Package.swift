@@ -41,7 +41,7 @@ let package = Package(
             dependencies: [
                 .product(name: "CatalogContracts", package: "kufar.CatalogContracts"),
                 "SearchDomain",
-                .product(name: "Networking", package: "kufar.Foundation"),
+                .product(name: "NetworkingInterface", package: "kufar.Foundation"),
                 .product(name: "SharedKernel", package: "kufar.Foundation"),
                 .product(name: "SearchInterface", package: "kufar.SearchContracts")
             ]
@@ -70,7 +70,7 @@ let package = Package(
                 "SearchData",
                 "SearchDomain",
                 .product(name: "AnalyticsAPI", package: "kufar.Analytics"),
-                .product(name: "Networking", package: "kufar.Foundation"),
+                .product(name: "NetworkingInterface", package: "kufar.Foundation"),
                 // Тип фабрики акцессора — часть публичной сигнатуры ассамблеи.
                 .product(name: "ListingKit", package: "kufar.ListingKit")
             ]

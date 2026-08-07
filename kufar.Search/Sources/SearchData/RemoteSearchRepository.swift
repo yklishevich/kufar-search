@@ -2,13 +2,13 @@ import Foundation
 import SearchDomain
 import SearchInterface
 import CatalogContracts
-import Networking
+import NetworkingInterface
 import SharedKernel
 
 package struct RemoteSearchRepository: SearchRepository {
-    private let client: APIClient
+    private let client: any HTTPPerforming
 
-    package init(client: APIClient) {
+    package init(client: any HTTPPerforming) {
         self.client = client
     }
 
